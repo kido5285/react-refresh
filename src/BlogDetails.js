@@ -3,11 +3,12 @@ import useFetch from './useFetch';
 
 const BlogDetails = () => {
     const {id} = useParams();
-    const {data: blog, error, loading} = useFetch('http://localhost:8000/blogs/' + id);
+    const {data: blog, error, loading} = useFetch('https://blog-api-site.herokuapp.com/blogs/' + id);
     const history = useHistory()
     const handleDelete = () => {
-        fetch('http://localhost:8000/blogs/' + blog['id'], {
-            method: "DELETE"
+        fetch('https://damp-coast-97320.herokuapp.com/https://blog-api-site.herokuapp.com/blogs/' + blog['id'], {
+            method: "DELETE",
+            headers: {"origin": "x-requested-with", "Host": "damp-coast-97320.herokuapp.com"}
         }).then(() => {
             history.push("/")
         })

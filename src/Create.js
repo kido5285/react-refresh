@@ -9,13 +9,13 @@ const Create = () => {
     const his = useHistory();
     const handleSubmit = (e) => {
         e.preventDefault(); 
-        const blog = {title, body, author};
+        const blog = JSON.parse(JSON.stringify({"title": title, "body": body, "author": author}).replace(/'/g, '"'));
         setLoading(true)
-        fetch('http://localhost:8000/blogs', {
+        fetch('https://damp-coast-97320.herokuapp.com/https://blog-api-site.herokuapp.com/blogs', {
             method: 'POST',
-            headers: {"Content-Type": "application/json"},
+            headers: {"origin": "x-requested-with", "Host": "damp-coast-97320.herokuapp.com", "Content-Type": "application/json"},
             body: JSON.stringify(blog)
-        }).then(() => {
+        }).then((res) => {
             setLoading(false)
             his.push("/")
         })

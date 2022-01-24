@@ -9,11 +9,12 @@ const useFetch = (url) => {
         const abortCont = new AbortController();
         fetch(url, {signal: abortCont.signal}).then(res => {
             if(!res.ok){
+                console.log(res)
                 throw Error('Failed to fetch data')
             }
             return res.json()
         }).then(data => {
-            setData(data)
+            setData(JSON.parse(data))
             setloading(false)
             setError(null)
         }).catch(e => {

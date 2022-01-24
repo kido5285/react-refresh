@@ -4,7 +4,10 @@
 * {
   margin: 0;
   font-family: "Quicksand";
-  color: #333;
+  color: #9c51b6;
+  font-weight: 600;
+  font-size: 1.1rem;
+  background-color: #fae6fa;
 }
 .navbar {
   padding: 20px;
@@ -12,10 +15,11 @@
   align-items: center;
   max-width: 1000px;
   margin: 0 auto;
-  border-bottom: 1px solid #f2f2f2;
+  border-bottom: 1px solid #9c51b6;
 }
 .navbar h1 {
   color: #f1356d;
+  font-size: 1.5rem;
 }
 .navbar .links {
   margin-left: auto;
@@ -25,6 +29,7 @@
   text-decoration: none;
   outline: none;
   padding: 6px;
+  color: #f1356d;
 }
 .navbar a:hover {
   color: #f1356d;
@@ -38,11 +43,11 @@
 .blog-preview {
   padding: 10px 16px;
   margin: 20px 0;
-  border-bottom: 1px solid #fafafa;
+  border-bottom: 1px solid #9c51b6;
 }
 
 .blog-preview:hover {
-  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.2);
 }
 
 .blog-preview h2 {
@@ -53,10 +58,6 @@
 
 .blog-preview a {
   text-decoration: none;
-}
-
-.blog-preview a:hover {
-  text-decoration:underline;
 }
 
 .blog-details h2 {
@@ -96,7 +97,8 @@
   width: 100%;
   padding: 6px 10px;
   margin: 10px 0;
-  border: 1px solid #ddd;
+  border: 1px solid rgba(0,0,0,0.7);
+  outline: none;
   box-sizing: border-box;
   display: block;
 }
